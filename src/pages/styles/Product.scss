@@ -1,0 +1,118 @@
+// variables
+@import '../../style/variables.scss';
+
+//mixins
+@import '../../style/mixins.scss';
+
+
+.page-rendered,.navigation,.title-horizontal {
+    background-color: transparent;
+  }
+  .navigation,.title-horizontal,.title-verticlal {
+      color:$mainBgColor;
+  }
+
+
+//BG
+.product-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height:50rem;
+    width: 100%;
+    overflow: hidden;
+    z-index: -1;
+  }
+  
+.product-img{
+    width: 100%;
+  }
+
+.product-container{
+display: flex;
+flex-direction: column;
+margin-bottom: 2rem;
+  }
+
+.product-images{
+    display: flex;
+    flex-direction: column;
+}
+
+//info-card
+
+.product-card{
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  width: 100%;
+  height: fit-content;
+  background-color: $accentColorOrange;
+  display: flex;
+  flex-direction: column;
+  @extend %fontH4;
+}
+
+.product-info-1, .product-care{
+display: flex;
+flex-direction: row;
+}
+
+.product-info{
+display: flex;
+flex-direction: column;
+}
+
+.info-box{
+  display: flex;
+  flex-direction: column;
+  border: 1px solid $mainBgColor;
+  width: 100%;
+  span:first-child{
+    color: $lineSeparatorColor;
+    padding-bottom: 0rem;
+  }
+}
+
+.product-info-1,
+.product-info-1 >:nth-child(1n),
+.product-info-1 >:nth-child(2n)
+{
+  border-bottom: 0rem;
+}
+
+.product-info >:first-child,
+.product-care >:first-child {
+  border-right: 0rem;
+}
+
+.product-info-1 >:nth-child(2n){
+  border-left: 0rem;
+}
+
+
+span {
+  padding: 0.7rem;
+}
+
+.product-price{
+  background-color: black;
+  color: red;
+  @extend %fontH2;
+}
+
+ // Medium devices (tablets, 768px and up)
+ @media (min-width: 48em) { 
+  .product-container{
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .product-images {
+    height: auto;
+    width:20rem;
+    margin-top:5rem
+  }
+  .product-card{
+    width: 20rem;
+    margin-right: 2rem;
+  }
+ }

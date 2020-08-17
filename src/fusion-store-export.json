@@ -1,0 +1,76 @@
+{"items" : {
+  "item1" : {
+    "category" : "dresses",
+    "color" : "black",
+    "id" : 1,
+    "img" : "https://collusion.imgix.net/e5163b783b764d958e529750dc539069.jpg?w=540&h=960&q=50&auto=format",
+    "name" : "mesh smock dress in black",
+    "price" : 20
+  },
+  "item2" : {
+    "catogory" : "bottoms",
+    "color" : "beige",
+    "id" : 2,
+    "img" : "https://collusion.imgix.net/f12acd8563c24682a29a57b36f5ebcdd.jpg?w=540&h=960&q=50&auto=format",
+    "name" : "utility skirt with pockets",
+    "price" : 15
+  },
+  "item3" : {
+    "category" : "bottoms",
+    "color" : "black",
+    "id" : 3,
+    "img" : "https://collusion.imgix.net/a0ba4e1254634de192e900e8fb6e584d.jpg?w=540&h=960&q=50&auto=format",
+    "name" : "cargo trousers",
+    "price" : 18
+  },
+  "item4" : {
+    "category" : "tops",
+    "color" : "print",
+    "id" : 4,
+    "img" : "https://collusion.imgix.net/2e4afbe4a59c47e689ffa9cdce0eaf7e.jpg?w=540&h=960&q=50&auto=format",
+    "name" : "leopard print utility west",
+    "price" : 8
+  },
+  "item5" : {
+    "category" : "bottoms",
+    "color" : "white",
+    "id" : 5,
+    "img" : "https://collusion.imgix.net/da2f05cf979449f5a1c0f663f55916cc.jpg?w=540&h=960&q=50&auto=format",
+    "name" : "unisex nylon joggers",
+    "price" : 18
+  },
+  "item6" : {
+    "category" : "tops",
+    "color" : "print",
+    "id" : 6,
+    "img" : "https://collusion.imgix.net/b7bf531d66704dddb1a676c6c8ba0ee8.jpg?w=540&h=960&q=50&auto=format",
+    "name" : "cropped tanktop in leopard",
+    "price" : 12
+  },
+  "item7" : {
+    "category" : "tops",
+    "color" : "blue",
+    "id" : 7,
+    "img" : "https://collusion.imgix.net/5b722be21b3347209c2c9449baa3a8d1.jpg?w=540&h=960&q=50&auto=format",
+    "name" : "long sleeve t-shirt",
+    "price" : 17
+  },
+  "item8" : {
+    "category" : "dresses",
+    "color" : "blue",
+    "id" : 8,
+    "img" : "https://collusion.imgix.net/c26f7f2dbdcf4dd78c0783529f657897.jpg?w=540&h=960&q=50&auto=format",
+    "name" : "floral print shirt dress",
+    "price" : 20
+  },
+  "item9" : {
+    "category" : "tops",
+    "color" : "orange",
+    "id" : 9,
+    "img" : "https://collusion.imgix.net/d1c43abde8264d3aa7cf4457e0c951d7.jpg?w=540&h=960&q=50&auto=format",
+    "name" : "long sleeve printed t-shirt",
+    "price" : 16
+  }
+}}
+
+
