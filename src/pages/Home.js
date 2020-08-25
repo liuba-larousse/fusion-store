@@ -1,20 +1,56 @@
 /** @format */
 
 import React from 'react';
-import Product from './Product';
+import HomeSection from '../components/HomeSection';
+import CardContext from '../components/CardContext';
+import { FaAngleRight } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
+import data from '../data';
 
 export default function Home() {
   return (
-    <Product
-      img='https://collusion.imgix.net/f12acd8563c24682a29a57b36f5ebcdd.jpg?w=540&h=960&q=50&auto=format'
-      category='bottoms'
-      color='beige'
-      price='20'
-      minSize='4'
-      mixSize='18'
-      description='Ut enim ad minim veniam, quis nostrud.'
-      wash='machine wash'
-      code='1'
-    />
+    <>
+      <section>
+        <div className='carousel-grid'>
+          <div className='carousel-title'>
+            <Link className='text-link' to='/collection'>
+              <span>Explore by Tag</span>
+              <FaAngleRight />
+            </Link>
+          </div>
+          <div className='listed-tags'>
+            {data.map((item, index) => {
+              return (
+                <Link
+                  className='text-link'
+                  to={`Collection?category=${item.category}`}
+                >
+                  <span className='type-tag'>
+                    {item.category}
+                  </span>
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      <CardContext.Consumer>
+        {(contextList) => (
+          <HomeSection
+            title='Collection'
+            list={contextList.itemList}
+          />
+        )}
+      </CardContext.Consumer>
+      <CardContext.Consumer>
+        {(contextList) => (
+          <HomeSection
+            title='Collaborators'
+            list={contextList.collabList}
+          />
+        )}
+      </CardContext.Consumer>
+    </>
   );
 }

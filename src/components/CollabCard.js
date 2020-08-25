@@ -7,10 +7,7 @@ export default function Card(props) {
   return (
     <li className='card'>
       <div className='tag-box'>
-        <Link
-          className='text-link'
-          to={`?category=${props.category}`}
-        >
+        <Link className='text-link' to='/collaborators'>
           <span className='type-tag'>{props.category}</span>
         </Link>
         <Link
@@ -32,11 +29,7 @@ export default function Card(props) {
       </Link>
 
       <div className='card-info'>
-        <span className='item-name'>
-          {props.name.substring(0, 18) + '...'}
-        </span>
-        <span> - </span>
-        <span className='item-price'>${props.price}</span>
+        <span className='item-name'>{props.name}</span>
       </div>
     </li>
   );

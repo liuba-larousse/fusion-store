@@ -5,50 +5,46 @@
 @import '../../style/mixins.scss';
 
 
-.page-rendered,.navigation,.title-horizontal {
-    background-color: transparent;
-  }
-  .navigation,.title-horizontal,.title-verticlal {
-      color:$mainBgColor;
-  }
 
 
-//BG
-.product-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height:50rem;
-    width: 100%;
-    overflow: hidden;
-    z-index: -1;
-  }
+// //BG
+// .product-bg {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     height:100vh;
+//     width: 100%;
+//     overflow: hidden;
+//     z-index: -1;
+//   }
   
-.product-img{
-    width: 100%;
-  }
+// .product-img{
+//     width: 100%;
+//   }
 
 .product-container{
-display: flex;
-flex-direction: column;
-margin-bottom: 2rem;
+  margin-top: 5rem;
+display: grid;
+grid-template-columns: 1fr;
+grid-template-rows: auto;
+grid-gap: 2rem;
+span {
+  padding: 0.7rem;
+}
   }
 
-.product-images{
-    display: flex;
-    flex-direction: column;
-}
 
 //info-card
 
 .product-card{
-  margin-top: 5rem;
-  margin-bottom: 5rem;
   width: 100%;
   height: fit-content;
   background-color: $accentColorOrange;
   display: flex;
   flex-direction: column;
+ 
+}
+.product-card-title{
   @extend %fontH4;
 }
 
@@ -62,13 +58,17 @@ display: flex;
 flex-direction: column;
 }
 
+.product-info, .product-care {
+  @extend %fontH4;
+}
+
 .info-box{
   display: flex;
   flex-direction: column;
   border: 1px solid $mainBgColor;
   width: 100%;
   span:first-child{
-    color: $lineSeparatorColor;
+    color: $accentColorPink;
     padding-bottom: 0rem;
   }
 }
@@ -89,30 +89,40 @@ flex-direction: column;
   border-left: 0rem;
 }
 
-
-span {
-  padding: 0.7rem;
-}
-
 .product-price{
   background-color: black;
   color: red;
   @extend %fontH2;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
 }
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 36em) {
+  .product-container{
+    grid-template-columns: 1fr 1fr;
+  }
+  .product-extra-img{
+  max-height: 25rem;
+  width: auto;
+  }
+  .product-card{
+    max-width: 18rem;
+  }
+  .product-bg {
+    height: 40rem;
+  }
+}
+
 
  // Medium devices (tablets, 768px and up)
  @media (min-width: 48em) { 
   .product-container{
-    flex-direction: row;
-    justify-content: space-around;
+    grid-template-columns: 1fr 1fr 1fr;
   }
-  .product-images {
-    height: auto;
-    width:22rem;
-    margin-top:5rem
-  }
-  .product-card{
-    width: 22rem;
-    margin-right: 2rem;
-  }
+.product-extra-img{
+  max-height: 25rem;
+  width: auto;
+}
  }

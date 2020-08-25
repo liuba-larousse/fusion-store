@@ -1,6 +1,6 @@
 /** @format */
 
-import React, { useState } from 'react';
+import React from 'react';
 import './style/App.css';
 import Collection from './pages/Collection';
 import Collaborators from './pages/Collaborators';
@@ -10,43 +10,16 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
+  useLocation,
 } from 'react-router-dom';
-import Navbar from './components/Navbar';
+import Header from './components/Header';
 import Footer from './components/Footer';
-import { FaBars } from 'react-icons/fa';
 
-export default function App(props) {
-  const [isActive, setActive] = useState(false);
-
-  function toggleDropdown() {
-    setActive(!isActive);
-  }
+export default function App({ match }) {
   return (
     <Router>
       <div className='layout-grid'>
-        <div className='title-animation'>
-          <span>fashion makes people dream</span>
-          <span>fashion makes people dream</span>
-          <span>fashion makes people dream</span>
-        </div>
-        <div className='toggle-icon'>
-          <span
-            className='nav-icon'
-            onClick={toggleDropdown}
-          >
-            <FaBars />
-          </span>
-        </div>
-        <div className='empty-space'></div>
-        <div className='title-verticlal'>
-          Vertical title
-        </div>
-        <div className='navigation'>
-          <Navbar isActive={isActive} />
-        </div>
-        <div className='title-horizontal'>
-          <div className='page-title'>collection</div>
-        </div>
+        <Header />
         <div className='page-rendered'>
           <Switch>
             <Route exact={true} path='/' component={Home} />
